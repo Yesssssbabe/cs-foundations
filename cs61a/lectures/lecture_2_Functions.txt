@@ -19,6 +19,7 @@ Function definition is a more powerful means of abstraction: binds names to expr
 
 >>> def <name>(<formal parameters>):
         return <return expression>
+
 Execution procedure for def statements:
 1. Create a function with signature <name> (formal parameters>)
 2. Set the body of that function to be everything indented after the first line
@@ -34,4 +35,16 @@ from operator import mul
 def square(x):
     return mul(x, x)
 square(-2)
-        
+
+Frames            Objects
+Global frame
+mul          →    func mul(...)
+square       →    func square(x)
+
+square
+x            →    -2
+Return Value →    4
+
+Looking Up Names In Environments
+Every expression is evaluated in the context of an environment.
+
